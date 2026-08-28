@@ -1,0 +1,494 @@
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===========================
+   RESPONSIVE TABLET
+=========================== */
+
+@media (max-width:992px){
+
+.detail-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.detail-sidebar{
+    position:relative;
+    top:0;
+    width:100%;
+}
+
+.detail-card,
+.detail-sidebar-card{
+    width:100%;
+}
+
+.detail-hero{
+    height:320px;
+}
+
+.detail-hero-overlay{
+    padding:30px;
+}
+
+.detail-hero-overlay h1{
+    font-size:32px;
+}
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+
+  /* sembunyikan tulisan logo */
+  .logo-area div {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-area h3,
+  .logo-area p {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 220px;
+    border-radius: 15px;
+    padding: 15px;
+    background: #003b73;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: .3s;
+    backdrop-filter: blur(10px);
+    left: auto;
+  }
+
+  nav.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  .login-btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+}
+
+/* =====================================
+TABLET
+===================================== */
+@media (max-width:1024px) {
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modern-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-contact-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-contact-logo img {
+    width: 180px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  /* HERO */
+  .hero {
+    height: 60vh;
+    background-position: center 45%;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  /* TENTANG */
+  .tentang-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tentang-text {
+    width: 100%;
+  }
+
+  .tentang-img {
+    width: 160px;
+    /* kecilkan logo */
+    max-width: 100%;
+    height: auto;
+  }
+
+  .tentang-text h2 {
+    font-size: 1.8rem;
+    /* kecilkan judul */
+    margin-bottom: 15px;
+  }
+
+  .tentang-text p {
+    font-size: 0.9rem;
+    /* kecilkan paragraf */
+    line-height: 1.7;
+  }
+
+  /* STATISTIK */
+  .stat-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* =====================
+   STRUKTUR
+===================== */
+@media (max-width: 768px) {
+
+  .judul-struktur {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .struktur-container {
+    overflow-x: hidden;
+    padding: 20px 10px;
+  }
+
+  /* Hilangkan semua garis bagan */
+  .line-horizontal {
+    max-width: 375px;
+    width: 52%;
+    transform: translateX(-50%);
+  }
+
+  .line-horizontal-bottom {
+    width: 300px;
+    margin: auto;
+  }
+
+  .line-center {
+    height: 0px;
+  }
+
+  .group-top,
+  .group-bottom {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .card-struktur {
+    width: 130px;
+  }
+
+  .card-struktur img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .row-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: repeat(2, auto);
+    gap: 20px;
+    justify-items: center;
+    position: relative;
+  }
+
+  .row-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  /* garis antar card */
+  .line-vertical {
+    width: 3px;
+    height: 30px;
+    background: #777;
+    margin: auto;
+  }
+
+  .line-down {
+    width: 3px;
+    height: 65px;
+    background: #777;
+    margin: auto;
+  }
+
+  .judul-struktur {
+    font-size: 28px;
+  }
+
+  .wakil::after {
+    height: 50px;
+  }
+
+  .main-line {
+    height: 482px;
+    align-items: center;
+  }
+}
+
+.item-atas:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.item-atas:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.item-atas:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.item-atas:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/*KONTAK*/
+@media (max-width: 768px) {
+.modern-grid {
+  display: grid;
+  grid-template-columns: 1fr !important;
+}
+
+.contact-right,
+.contact-left {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact-right {
+  padding: 20px;
+}
+
+.contact-info,
+.info-card{
+	padding:15px;
+    border-radius:15px;
+}
+
+.info-item{
+    padding: 15px 12px;
+    margin-bottom: 15px;
+    min-height: auto;
+}
+
+.info-icon{
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+}
+
+.info-icon img,
+.info-icon i{
+    font-size:30px;
+    width: 30px;
+    height: 30px;
+}
+
+.info-content h3{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.info-content p,
+.info-cotent a{
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.contact-hero{
+        min-height: 350px;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .contact-hero::before{
+        background: rgba(0,0,0,0.45);
+    }
+}
+
+/* GALERI */
+.galeri-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-simple h2 {
+  font-size: 24px;
+}
+
+.footer-menu {
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-social {
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width:480px) {
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .galeri-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-galeri {
+    width: 100%;
+  }
+}
+
+
+/* ===========================
+   RESPONSIVE MOBILE
+=========================== */
+
+@media (max-width:768px){
+.hero-detail{
+    height:220px;
+}
+
+.hero-overlay{
+    padding:20px;
+    justify-content:flex-end;
+}
+
+.hero-overlay h1{
+    font-size:24px;
+    line-height:1.4;
+}
+
+.hero-overlay p{
+    font-size:13px;
+}
+
+.status{
+    font-size:12px;
+    padding:6px 14px;
+}
+
+.detail-container{
+    width:94%;
+    margin:25px auto;
+}
+
+.detail-card{
+    padding:20px;
+}
+
+.detail-card h2{
+    font-size:22px;
+}
+
+.detail-card p{
+    font-size:15px;
+    text-align:left;
+}
+
+.detail-sidebar-card{
+    padding:20px;
+}
+
+.detail-sidebar-card h3{
+    font-size:22px;
+}
+
+.detail-info{
+    gap:12px;
+}
+
+.detail-icon{
+    width:36px;
+    height:36px;
+    font-size:15px;
+}
+
+.detail-info-text strong{
+    font-size:14px;
+}
+
+.detail-card iframe{
+    height:250px;
+}
+
+#countdown{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.count-box{
+    padding:15px 10px;
+}
+
+.count-box h2{
+    font-size:22px;
+}
+
+.detail-btn-kembali{
+    width:100%;
+    justify-content:center;
+}
+}

@@ -1,0 +1,5 @@
+Array
+(
+    [nama] => hanif
+    [email] => halifahputri19@gmail.com
+)
